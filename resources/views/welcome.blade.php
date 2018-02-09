@@ -11,84 +11,28 @@
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
         <link href="{{ mix('css/app.css') }}" rel="stylesheet" type="text/css" />
         <script src="{{ mix('js/app.js') }}"></script>
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Raleway', sans-serif;
-                font-weight: 100;
-                height: 100vh;
-                margin: 0;
-            }
-
-            .full-height {
-                height: 100vh;
-            }
-
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
-
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 12px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
     </head>
     <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-                        <a href="{{ route('register') }}">Register</a>
-                    @endauth
+        <div class="container mx-auto px-4 py-5">
+            <h1 class="text-center">Type your name to see it console logged via Stimulus JS</h1>
+            <div class="flex bg-grey-lighter">
+                <div class="flex-1 text-grey-darker text-center bg-grey-light px-4 py-2 m-2">
+                    <a href="https://laravel.com">Laravel 5.5</a>
                 </div>
-            @endif
-
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel
+                <div class="flex-1 text-grey-darker text-center bg-grey-light px-4 py-2 m-2">
+                    <a href="https://tailwindcss.com">Tailwind.css</a>
                 </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                <div class="flex-1 text-grey-darker text-center bg-grey-light px-4 py-2 m-2">
+                    <a href="https://stimulusjs.org">Stimulus.js</a>
+                </div>
+                <div class="flex-1 text-grey-darker text-center bg-grey-light px-4 py-2 m-2">
+                    <a href="https://github.com/turbolinks/turbolinks">Turbolinks (via Stimulus)</a>
+                </div>
+                <div class="flex-1 text-grey-darker text-center bg-grey-light px-4 py-2 m-2">
+                    <div data-controller="hello">
+                        <input data-target="hello.name" type="text">
+                        <button data-action="click->hello#greet">Greet</button>
+                    </div>
                 </div>
             </div>
         </div>
