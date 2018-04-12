@@ -1,3 +1,4 @@
+# This repo has been moved to: [Here](https://github.com/thomasjohnkane/tailstart)
 # Tailstart
 Get started with Laravel 5.5, Tailwind CSS, Stimulus JS, and Turbolinks
 
